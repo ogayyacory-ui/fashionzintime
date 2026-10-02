@@ -1,0 +1,6 @@
+import { formatCurrency } from '../../utils/formatters.js'
+
+export default function InventoryTable({ products, onEdit, onRemove }) {
+  if (!products.length) return <p className="admin-empty-state">No products yet. Add the first item to your inventory.</p>
+  return <div className="admin-table-wrap"><table className="admin-table"><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>In stock</th><th><span className="sr-only">Actions</span></th></tr></thead><tbody>{products.map((product) => <tr key={product.id}><td><div className="admin-product-cell"><img src={product.image || '/images/garment-placeholder.svg'} alt="" onError={(event) => { event.currentTarget.src = '/images/garment-placeholder.svg' }} /><span>{product.name}</span></div></td><td>{product.category}</td><td>{formatCurrency(product.price)}</td><td><span className={product.stock < 5 ? 'stock-count is-low' : 'stock-count'}>{product.stock}</span></td><td><div className="admin-row-actions"><button type="button" className="admin-text-button" onClick={() => onEdit(product)}>Edit</button><button type="button" className="admin-text-button is-danger" onClick={() => onRemove(product)}>Remove</button></div></td></tr>)}</tbody></table></div>
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></symbol>
+  <symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+  <symbol id="filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10m-7 6h4"/><circle cx="8" cy="6" r="1.5"/><circle cx="15" cy="12" r="1.5"/></symbol>
+</svg>
